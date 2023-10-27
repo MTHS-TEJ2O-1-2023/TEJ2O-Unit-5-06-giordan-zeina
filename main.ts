@@ -5,23 +5,23 @@
  * This program a program that will tell the distance in cm to the sonar
 */
 
-//variable
+// variable
 let distance: number = 0
 
-//cleanup
+// cleanup
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-//input
+// input
 input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
   distance = sonar.ping(
-  DigitalPin.P1,
-  DigitalPin.P2,
-  PingUnit.Centimeters
+    DigitalPin.P1,
+    DigitalPin.P2,
+    PingUnit.Centimeters
   )
 
-  //output
+  // output
   basic.showNumber(distance)
   basic.showIcon(IconNames.Happy)
 })
