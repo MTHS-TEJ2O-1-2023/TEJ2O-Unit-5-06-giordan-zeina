@@ -8,6 +8,7 @@
 //variable
 let distance: number = 0
 
+//cleanup
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
@@ -18,7 +19,9 @@ input.onButtonPressed(Button.A, function () {
   DigitalPin.P1,
   DigitalPin.P2,
   PingUnit.Centimeters
-    )
+  )
+
+  //output
   basic.showNumber(distance)
   basic.showIcon(IconNames.Happy)
 })
