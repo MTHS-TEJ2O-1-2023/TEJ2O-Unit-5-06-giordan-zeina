@@ -1,8 +1,24 @@
-/* Copyright (c) 2020 MTHS All rights reserved
+/* Copyright (c) 2023 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Giordan Zeina
+ * Created on: Oct 2023
+ * This program a program that will tell the distance in cm to the sonar
 */
 
-basic.showString('Hello, World!')
+//variable
+let distance: number = 0
+
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+//input
+input.onButtonPressed(Button.A, function () {
+  basic.clearScreen()
+  distance = sonar.ping(
+  DigitalPin.P1,
+  DigitalPin.P2,
+  PingUnit.Centimeters
+    )
+  basic.showNumber(distance)
+  basic.showIcon(IconNames.Happy)
+})
